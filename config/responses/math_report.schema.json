@@ -1,0 +1,24 @@
+{
+  "type":"object",
+  "required":["rtp_target","rtp_simulated","stdev_per_100","tail_99p","worst_cluster","sim_spins","sheet_link","actions"],
+  "properties":{
+    "rtp_target":{"type":"number"},
+    "rtp_simulated":{"type":"number"},
+    "stdev_per_100":{"type":"number"},
+    "tail_99p":{"type":"number"},
+    "worst_cluster":{"type":"number"},
+    "sim_spins":{"type":"integer"},
+    "sheet_link":{"type":"string"},
+    "actions":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "oneOf":[
+          {"properties":{"type":{"const":"sheets_upsert"},"sheet":{"type":"string"},"rows":{"type":"array"}},"required":["type","sheet","rows"]},
+          {"properties":{"type":{"const":"github_commit"},"path":{"type":"string"},"content_b64":{"type":"string"},"message":{"type":"string"}},"required":["type","path","content_b64","message"]}
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
