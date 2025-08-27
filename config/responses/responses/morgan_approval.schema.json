@@ -1,0 +1,28 @@
+{
+  "type":"object",
+  "required":["decision","reason","checks","actions"],
+  "properties":{
+    "decision":{"type":"string","enum":["APPROVED","CHANGES REQUIRED"]},
+    "reason":{"type":"string"},
+    "checks":{
+      "type":"object",
+      "required":["links_public","payload_ok","fps_ok","rtp_ok"],
+      "properties":{
+        "links_public":{"type":"boolean"},
+        "payload_ok":{"type":"boolean"},
+        "fps_ok":{"type":"boolean"},
+        "rtp_ok":{"type":"boolean"}
+      }
+    },
+    "actions":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "oneOf":[
+          {"properties":{"type":{"const":"sheets_upsert"},"sheet":{"type":"string"},"rows":{"type":"array"}},"required":["type","sheet","rows"]}
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
