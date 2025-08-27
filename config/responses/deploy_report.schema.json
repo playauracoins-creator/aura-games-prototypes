@@ -1,0 +1,23 @@
+{
+  "type":"object",
+  "required":["netlify_or_vercel_url","github_commit","payload_kb","fps_observed","notes","actions"],
+  "properties":{
+    "netlify_or_vercel_url":{"type":"string"},
+    "github_commit":{"type":"string"},
+    "payload_kb":{"type":"number"},
+    "fps_observed":{"type":"number"},
+    "notes":{"type":"string"},
+    "actions":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "oneOf":[
+          {"properties":{"type":{"const":"sheets_upsert"},"sheet":{"type":"string"},"rows":{"type":"array"}},"required":["type","sheet","rows"]},
+          {"properties":{"type":{"const":"github_commit"},"path":{"type":"string"},"content_b64":{"type":"string"},"message":{"type":"string"}},"required":["type","path","content_b64","message"]},
+          {"properties":{"type":{"const":"deploy"},"target":{"type":"string"}},"required":["type","target"]}
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
