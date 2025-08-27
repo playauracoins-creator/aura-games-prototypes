@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "required": ["title","mechanic","theme","accessibility_notes","pacing","differentiators","proof_link","actions"],
+  "properties": {
+    "title": {"type":"string"},
+    "mechanic": {"type":"string"},
+    "theme": {"type":"string"},
+    "accessibility_notes": {"type":"string"},
+    "pacing": {"type":"string"},
+    "differentiators": {"type":"array","items":{"type":"string"}},
+    "proof_link": {"type":"string"},
+    "actions": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "oneOf": [
+          {"properties":{"type":{"const":"sheets_upsert"},"sheet":{"type":"string"},"rows":{"type":"array"}},"required":["type","sheet","rows"]},
+          {"properties":{"type":{"const":"github_commit"},"path":{"type":"string"},"content_b64":{"type":"string"},"message":{"type":"string"}},"required":["type","path","content_b64","message"]},
+          {"properties":{"type":{"const":"deploy"},"target":{"type":"string"}},"required":["type","target"]}
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}
