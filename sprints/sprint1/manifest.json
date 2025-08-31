@@ -1,0 +1,17 @@
+{
+    "sprint_id":  "sprint1",
+    "start_date":  "2025-08-31",
+    "target":  "Baseline portfolio v0",
+    "games":  [
+                  "Neon Drift (Crash)",
+                  "Street Hustle Blackjack (Table)",
+                  "Cosmic Loot (Slot)",
+                  "Mythos Remix (Slot)",
+                  "Clout Chase (Slot)"
+              ],
+    "status":  "KICKED_OFF",
+    "proofs":  {
+
+               },
+    "notes":  "Created by Bridge kickoff script. Sheets logging will be added later."
+}
