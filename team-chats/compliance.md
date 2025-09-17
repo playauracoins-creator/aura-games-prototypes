@@ -15,5 +15,6 @@ Ensure all features meet Zero-Cost Stack rules and Proof Standard requirements.
 - TBD
 
 ## PROOFS
-- ✅ Zero-Cost Stack: [Zero_Cost_Stack_Rules.pdf](../Zero_Cost_Stack_Rules.pdf)
-- ✅ Proof Standards: [Proof_Standard.pdf](../Proof_Standard.pdf)
+- ✅ Zero-Cost Stack: [Zero_Cost_Stack_Rules.pdf](../docs/Zero_Cost_Stack_Rules.md)
+- ✅ Proof Standards: [Proof_Standard.pdf](../docs/Proof_Standard.md)
+
