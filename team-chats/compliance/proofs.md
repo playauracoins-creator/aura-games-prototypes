@@ -6,3 +6,7 @@
 
 ## Historical Proofs
 - (add prior sprints here)
+
+- Schema present: roles/compliance/math_report.schema.json
+- Example: roles/compliance/examples/math_report.example.json
+

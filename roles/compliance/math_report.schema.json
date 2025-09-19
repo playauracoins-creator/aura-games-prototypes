@@ -1,0 +1,119 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "math_report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rtp_target",
+    "rtp_simulated",
+    "stdev_per_100",
+    "tail_99p",
+    "worst_cluster",
+    "sim_spins",
+    "sheet_link",
+    "actions"
+  ],
+  "properties": {
+    "rtp_target": {
+      "type": "number",
+      "minimum": 80,
+      "maximum": 100,
+      "description": "Target RTP in %, e.g. 96.0"
+    },
+    "rtp_simulated": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Simulated RTP in % from current config"
+    },
+    "stdev_per_100": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Standard deviation per 100 spins (percentage points)"
+    },
+    "tail_99p": {
+      "type": "number",
+      "minimum": 0,
+      "description": "99th percentile loss (per 100 spins) or equivalent risk metric"
+    },
+    "worst_cluster": {
+      "type": ["string","array"],
+      "description": "Worst observed loss cluster or a list of cluster descriptors"
+    },
+    "sim_spins": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of spins used in the simulation"
+    },
+    "sheet_link": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public Google Sheet or CSV link with supporting calculations"
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["sheets_upsert","github_commit","deploy"]
+          },
+          "note": { "type": "string" },
+
+          "sheets_upsert": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "spreadsheetId": { "type": "string" },
+              "range": { "type": "string" },
+              "values": { "type": "array", "items": { "type": "array", "items": {} } }
+            },
+            "required": ["spreadsheetId","range","values"]
+          },
+
+          "github_commit": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "repo": { "type": "string" },
+              "path": { "type": "string" },
+              "message": { "type": "string" },
+              "content_base64": { "type": "string" }
+            },
+            "required": ["repo","path","message","content_base64"]
+          },
+
+          "deploy": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "service": { "type": "string", "enum": ["vercel"] },
+              "cwd": { "type": "string" },
+              "prod": { "type": "boolean" }
+            },
+            "required": ["service","cwd"]
+          }
+        },
+
+        "allOf": [
+          {
+            "if": { "properties": { "type": { "const": "sheets_upsert" } } },
+            "then": { "required": ["type","sheets_upsert"] }
+          },
+          {
+            "if": { "properties": { "type": { "const": "github_commit" } } },
+            "then": { "required": ["type","github_commit"] }
+          },
+          {
+            "if": { "properties": { "type": { "const": "deploy" } } },
+            "then": { "required": ["type","deploy"] }
+          }
+        ]
+      }
+    }
+  }
+}

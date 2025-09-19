@@ -1,0 +1,22 @@
+﻿{
+  "rtp_target": 96.0,
+  "rtp_simulated": 95.8,
+  "stdev_per_100": 42.3,
+  "tail_99p": 180.5,
+  "worst_cluster": "Run of 400 dry spins at p=0.01",
+  "sim_spins": 500000,
+  "sheet_link": "https://docs.google.com/spreadsheets/d/1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8/edit?usp=sharing",
+  "actions": [
+    {
+      "type": "sheets_upsert",
+      "note": "Write stub RTP row",
+      "sheets_upsert": {
+        "spreadsheetId": "1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8",
+        "range": "RTP_TEMPLATES!A2:I2",
+        "values": [[
+          "S1-SLOT-001","v0.1","96.0","MED","seed-123","100000","95.8","0.9","PRELIM stub"
+        ]]
+      }
+    }
+  ]
+}
