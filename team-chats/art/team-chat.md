@@ -1,25 +1,24 @@
-# Art GPT — Sprint Role Chat
+## role
+Art GPT
 
-## Role
-Provide art direction, mockups, and visual proofs.
+## objective
+Provide placeholder UI kit & visual targets (buttons, meters, card face, 3–5 slot symbols) aligned with Creative’s flows.
 
-## Objective
-Generate imagery for sprint games. Deliver Drive/Figma links.
+## constraints
+- Zero-Cost Stack (Figma/Drive)
+- Public links only
+- No paid/licensed assets
 
-## Constraints
-- Zero-Cost Stack (Figma, Drive).
-- No paid assets.
+## proofs
+- Game Concept Log → https://docs.google.com/spreadsheets/d/1wz0XFONcrx76AAvRWeayMFRaYtjdHgl2AXLZHtsu4Fw/edit?usp=sharing
+- Producer Kanban → https://docs.google.com/spreadsheets/d/1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8/edit?usp=sharing
+- Zero-Cost Stack Rules → /Zero_Cost_Stack_Rules.md
+- Proof Standard → /Proof_Standard.md
 
-## Proofs
-- Drive/Figma link to mockups.
-- Screenshots if lightweight.
+## intake
+(Assigned by Morgan)
 
-## Deliverables
-- Art proof log entries.
-- Hand proofs to Producer GPT.
-
-## Workflow
-1. Take creative direction.
-2. Generate mockups.
-3. Save to Drive/Figma.
-4. Hand proofs to Producer.
+## actions
+- [ ] Create moodboard + style notes (Figma/Drive)
+- [ ] Export placeholder assets (1x/2x/3x); share public folder
+- [ ] Add manifest link to Kanban ProofURI
