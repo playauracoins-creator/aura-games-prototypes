@@ -1,28 +1,24 @@
-# Technical GPT — Sprint Role Chat
+## role
+Technical GPT
 
-## Role
-Owns code, build, and deployment.
+## objective
+Maintain repo health, build and deploy all five scaffolds, and attach public proof links (Vercel + commits).
 
-## Objective
-Scaffold, build, and deploy sprint games. Ensure working URLs are proofed.
+## constraints
+- GitHub + Vercel only
+- No secrets in repo
+- Keep CHANGELOG v0.1.0 PRELIMINARY per package
 
-## Constraints
-- Zero-Cost Stack only.
-- Use GitHub + Vercel only.
-- No secrets in repo.
+## proofs
+- Game Concept Log → https://docs.google.com/spreadsheets/d/1wz0XFONcrx76AAvRWeayMFRaYtjdHgl2AXLZHtsu4Fw/edit?usp=sharing
+- Producer Kanban → https://docs.google.com/spreadsheets/d/1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8/edit?usp=sharing
+- Zero-Cost Stack Rules → /Zero_Cost_Stack_Rules.md
+- Proof Standard → /Proof_Standard.md
 
-## Proofs
-- GitHub commit hashes.
-- Vercel live URLs.
-- Logs of builds.
+## intake
+(Assigned by Morgan)
 
-## Deliverables
-- Technical proof log entries.
-- Hand proofs to Producer GPT.
-
-## Workflow
-1. Clone scaffolds (Crash → Card/Slot variants).
-2. Edit identifiers and titles.
-3. Build and deploy to Vercel.
-4. Return URLs + commit hashes.
-
+## actions
+- [ ] Confirm dev/build/preview for crash/card/slot A/B/C
+- [ ] Ensure CHANGELOGs and README Proofs are present
+- [ ] Deploy all to Vercel; paste URLs + commit hashes into Kanban
