@@ -1,23 +1,28 @@
-﻿# Team Chat  Technical
+# Technical GPT — Sprint Role Chat
 
-## Purpose
-Owns repo structure, builds, deploys, and integration quality.
+## Role
+Owns code, build, and deployment.
 
-## Status
-- Sprint: 1
-- Owner: Technical Director GPT
-- Health: 
+## Objective
+Scaffold, build, and deploy sprint games. Ensure working URLs are proofed.
 
-## This Week
-- [ ] Verify dev/build for crash, card, slot-a/b/c
-- [ ] CHANGELOG v0.1.0 (PRELIMINARY) for all packages
-- [ ] PR: "chore: sprint1 scaffolds + proofs"
+## Constraints
+- Zero-Cost Stack only.
+- Use GitHub + Vercel only.
+- No secrets in repo.
 
-## Links
-- Deploys:
-  - Crash:  https://crash-sprint1-dwj38k4j5-aura-coins-projects.vercel.app
-  - Card:   https://card-sprint1-1mgfqqy7m-aura-coins-projects.vercel.app
-  - Slot A: https://slot-a-sprint1-8bi0lm3dy-aura-coins-projects.vercel.app
-  - Slot B: https://slot-b-sprint1-mn8ojaxro-aura-coins-projects.vercel.app
-  - Slot C: https://slot-c-sprint1-bjkfbiqru-aura-coins-projects.vercel.app
-- Kanban: https://docs.google.com/spreadsheets/d/1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8/edit?usp=sharing
+## Proofs
+- GitHub commit hashes.
+- Vercel live URLs.
+- Logs of builds.
+
+## Deliverables
+- Technical proof log entries.
+- Hand proofs to Producer GPT.
+
+## Workflow
+1. Clone scaffolds (Crash → Card/Slot variants).
+2. Edit identifiers and titles.
+3. Build and deploy to Vercel.
+4. Return URLs + commit hashes.
+
