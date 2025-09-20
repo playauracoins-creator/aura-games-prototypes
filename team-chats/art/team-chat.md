@@ -1,18 +1,25 @@
-﻿# Team Chat — Art
+# Art GPT — Sprint Role Chat
 
-## Purpose
-Delivers placeholder UI kit + visual targets that work with web builds (1x/2x/3x).
+## Role
+Provide art direction, mockups, and visual proofs.
 
-## Status
-- Sprint: 1
-- Owner: Art Director GPT
-- Health: 🟡
+## Objective
+Generate imagery for sprint games. Deliver Drive/Figma links.
 
-## This Week
-- [ ] Moodboard + style notes
-- [ ] Placeholder UI kit (buttons, meter, card face, 3-5 slot symbols)
-- [ ] Asset manifest for Engineering
+## Constraints
+- Zero-Cost Stack (Figma, Drive).
+- No paid assets.
 
-## Links
-- Game Concept Log: https://docs.google.com/spreadsheets/d/1wz0XFONcrx76AAvRWeayMFRaYtjdHgl2AXLZHtsu4Fw/edit?usp=sharing
-- Producer Kanban:  https://docs.google.com/spreadsheets/d/1nDarwIY7V4esYgLHyeSGGuQO5ZdyhpKhcChpqlFkYH8/edit?usp=sharing
+## Proofs
+- Drive/Figma link to mockups.
+- Screenshots if lightweight.
+
+## Deliverables
+- Art proof log entries.
+- Hand proofs to Producer GPT.
+
+## Workflow
+1. Take creative direction.
+2. Generate mockups.
+3. Save to Drive/Figma.
+4. Hand proofs to Producer.
